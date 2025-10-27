@@ -28,7 +28,7 @@ WHERE period = 'I semestre' AND year = 1;
 
 SELECT *
 FROM `exams`
-WHERE `date`= "2020-06-20" AND HOUR(`hour`) >= 14
+WHERE `date`= "2020-06-20" AND HOUR > '14:00:00'
 
 6. Selezionare tutti i corsi di laurea magistrale (38)
 
@@ -38,13 +38,11 @@ WHERE level = 'magistrale';
 
 7. Da quanti dipartimenti è composta l'università? (12)
 
-SELECT COUNT(*) 
-AS numero_dipartimenti 
+SELECT COUNT(*) AS numero_dipartimenti 
 FROM departments;
 
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-SELECT COUNT(*) 
-AS insegnanti_senza_telefono
+SELECT COUNT(*) AS insegnanti_senza_telefono
 FROM teachers 
-WHERE phone IS NULL OR phone = ''; */
+WHERE phone IS NULL */
